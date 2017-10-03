@@ -1,8 +1,14 @@
 package com.example.gnjoroge.ingredientfinder;
 
 import android.content.Intent;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.SearchView;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -32,6 +38,39 @@ public class RecipeDisplay extends AppCompatActivity {
         findRecipe(recipe);
     }
 
+    //returning response after user enters a search word
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        ButterKnife.bind(this);
+
+        final MenuItem menuItem = menu.findItem(R.id.action_search);
+        SearchView searchView = (SearchView) MenuItemCompat.getActionView(menuItem);
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener(){
+
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+//
+                findRecipe(query);
+                return false;
+            }
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return false;
+            }
+        });
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        return super.onOptionsItemSelected(item);
+    }
+
+
+  //accessing the API
     private void findRecipe(String recipe) {
 
         final RecipePuppyService recipePuppyService = new RecipePuppyService();
@@ -44,7 +83,8 @@ public class RecipeDisplay extends AppCompatActivity {
 
             @Override
             public void onResponse(Call call, Response response) {
-                mRecipes = recipePuppyService .processResults(response);
+
+               mRecipes = recipePuppyService .processResults(response);
                 RecipeDisplay.this.runOnUiThread(new Runnable() {
 
                     @Override
