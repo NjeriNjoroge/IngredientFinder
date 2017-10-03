@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
 import android.util.Log;
 import android.view.Menu;
@@ -11,6 +13,8 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import com.example.gnjoroge.ingredientfinder.adapters.RecipeListAdapter;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -23,7 +27,10 @@ import okhttp3.Response;
 
 public class RecipeDisplay extends AppCompatActivity {
 
-    @Bind(R.id.recipesView) ListView mRecipesView;
+    @Bind(R.id.recyclerView) RecyclerView mRecyclerView;
+
+    //calling the RecipeListAdapter created
+    private RecipeListAdapter mAdapter;
 
     public ArrayList<Recipe> mRecipes = new ArrayList<>();
 
@@ -89,13 +96,13 @@ public class RecipeDisplay extends AppCompatActivity {
 
                     @Override
                     public void run() {
-                        String[] recipeResults = new String[mRecipes.size()];
-                        for(int i = 0; i < recipeResults.length; i++) {
-                            recipeResults[i] = mRecipes.get(i).getTitle();
-                        }
 
-                        ArrayAdapter adapter = new ArrayAdapter(RecipeDisplay.this, android.R.layout.simple_list_item_1, recipeResults);
-                        mRecipesView.setAdapter(adapter);
+                        //using the created adapter and recycler view to display the recipes
+                        mAdapter = new RecipeListAdapter(getApplicationContext(), mRecipes);
+                        mRecyclerView.setAdapter(mAdapter);
+                        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(RecipeDisplay.this);
+                        mRecyclerView.setLayoutManager(layoutManager);
+                        mRecyclerView.setHasFixedSize(true);
 
                     }
                 });
