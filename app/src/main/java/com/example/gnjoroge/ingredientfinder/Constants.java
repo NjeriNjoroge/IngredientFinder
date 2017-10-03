@@ -6,5 +6,7 @@ package com.example.gnjoroge.ingredientfinder;
 
 public class Constants {
 
-    public static final String PUPPY_BASE_URL = "http://www.recipepuppy.com/api/?q=";
+    public static final String PUPPY_BASE_URL = "http://www.recipepuppy.com/api/?q=bread";
+
+//    public static final String PUPPY_RECIPE_QUERY = "q";
 }
