@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
    // @Bind(R.id.viewPager) ViewPager mViewPager;
     @Bind(R.id.searchRecipe) Button mSearchRecipe;
+    @Bind(R.id.discussionForum) Button mDiscuss;
 
 
 
@@ -24,8 +25,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-
-
 
         mSearchRecipe.setOnClickListener(new View.OnClickListener(){
 
@@ -36,6 +35,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
 
+        });
+
+        mDiscuss.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(MainActivity.this, DiscussionForum.class);
+                startActivity(intent);
+            }
         });
 
     }
