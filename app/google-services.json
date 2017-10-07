@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "811933585562",
+    "firebase_url": "https://ingredientfinder-6106e.firebaseio.com",
+    "project_id": "ingredientfinder-6106e",
+    "storage_bucket": "ingredientfinder-6106e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:811933585562:android:bd3c68570ac15899",
+        "android_client_info": {
+          "package_name": "com.example.gnjoroge.ingredientfinder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "811933585562-996pghhkg4deie05tuttq33hsm8uot16.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.gnjoroge.ingredientfinder",
+            "certificate_hash": "872966bb60dcf154ddd4909ca20d270d5416eb6a"
+          }
+        },
+        {
+          "client_id": "811933585562-4onqbkovormllgi6r5phec4u62ptuo75.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCk-p9OjQBTGbegrWjYjWj6BTekyGXN-XU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "811933585562-4onqbkovormllgi6r5phec4u62ptuo75.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,6 +1,7 @@
-package com.example.gnjoroge.ingredientfinder;
+package com.example.gnjoroge.ingredientfinder.services;
 
-import android.util.Log;
+import com.example.gnjoroge.ingredientfinder.Constants;
+import com.example.gnjoroge.ingredientfinder.model.Recipe;
 
 import org.json.JSONArray;
 import org.json.JSONException;

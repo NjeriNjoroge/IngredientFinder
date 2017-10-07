@@ -1,4 +1,4 @@
-package com.example.gnjoroge.ingredientfinder;
+package com.example.gnjoroge.ingredientfinder.ui;
 
 import android.content.Intent;
 import android.support.v4.view.MenuItemCompat;
@@ -7,13 +7,13 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 
+import com.example.gnjoroge.ingredientfinder.R;
+import com.example.gnjoroge.ingredientfinder.model.Recipe;
+import com.example.gnjoroge.ingredientfinder.services.RecipePuppyService;
 import com.example.gnjoroge.ingredientfinder.adapters.RecipeListAdapter;
 
 import java.io.IOException;

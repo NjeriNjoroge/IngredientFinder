@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.gnjoroge.ingredientfinder.R;
-import com.example.gnjoroge.ingredientfinder.Recipe;
+import com.example.gnjoroge.ingredientfinder.model.Recipe;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;

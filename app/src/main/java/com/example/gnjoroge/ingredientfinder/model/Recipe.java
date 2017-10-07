@@ -1,4 +1,4 @@
-package com.example.gnjoroge.ingredientfinder;
+package com.example.gnjoroge.ingredientfinder.model;
 
 /**
  * Created by gnjoroge on 10/3/17.
