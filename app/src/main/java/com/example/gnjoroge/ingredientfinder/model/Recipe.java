@@ -6,12 +6,11 @@ package com.example.gnjoroge.ingredientfinder.model;
 
 public class Recipe {
 
-
   //fields in the Recipe Puppy API
-    private String title;
-    private String href;
-    private String ingredients;
-    private String thumbnail;
+    String title;
+    String href;
+    String ingredients;
+    String thumbnail;
 
     public Recipe (String title, String href, String ingredients, String thumbnail) {
 

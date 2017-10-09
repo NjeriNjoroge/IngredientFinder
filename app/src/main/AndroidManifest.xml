@@ -19,7 +19,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.RecipeDisplay" />
-        <activity android:name=".ui.DiscussionForum"></activity>
+        <activity android:name=".ui.DiscussionForum" />
+        <activity android:name=".ui.PostedQuestionsList" />
+        <activity android:name=".ui.PostQuestionsList"></activity>
     </application>
 
 </manifest>

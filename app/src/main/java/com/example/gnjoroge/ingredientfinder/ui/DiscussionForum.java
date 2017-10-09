@@ -1,5 +1,6 @@
 package com.example.gnjoroge.ingredientfinder.ui;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -8,6 +9,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
 
 import com.example.gnjoroge.ingredientfinder.Constants;
 import com.example.gnjoroge.ingredientfinder.R;
@@ -32,6 +34,8 @@ public class DiscussionForum extends AppCompatActivity {
     @Bind(R.id.inputBody) EditText mInputBody;
     @Bind(R.id.submitPost) Button mSubmitPost;
 
+    @Bind(R.id.allPosts) Button mAllPosts;
+
     //calling the PostDetailAdapter created
     private DiscussionForumAdapter mAdapter;
 
@@ -50,6 +54,16 @@ public class DiscussionForum extends AppCompatActivity {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(DiscussionForum.this);
         mRecyclerView.setLayoutManager(layoutManager);
         mRecyclerView.setHasFixedSize(true);
+
+        mAllPosts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (view == mAllPosts) {
+                    Intent intent = new Intent(DiscussionForum.this, PostQuestionsList.class);
+                    startActivity(intent);
+                }
+            }
+        });
 
         mSubmitPost.setOnClickListener(new View.OnClickListener() {
 

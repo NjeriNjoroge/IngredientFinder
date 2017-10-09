@@ -10,7 +10,8 @@ import android.widget.TextView;
 
 import com.example.gnjoroge.ingredientfinder.R;
 import com.example.gnjoroge.ingredientfinder.model.Post;
-import com.example.gnjoroge.ingredientfinder.ui.DiscussionForum;
+import com.example.gnjoroge.ingredientfinder.ui.PostQuestionsList;
+
 
 import java.util.ArrayList;
 
@@ -79,7 +80,7 @@ public class DiscussionForumAdapter extends RecyclerView.Adapter<DiscussionForum
         public void onClick(View view) {
 
             int itemPosition = getLayoutPosition();
-            Intent intent = new Intent(mContext, DiscussionForum.class);
+            Intent intent = new Intent(mContext, PostQuestionsList.class);
             intent.putExtra("position", itemPosition);
 //            intent.putExtra("posts", Parcel.wrap(mPosts));
             mContext.startActivity(intent);

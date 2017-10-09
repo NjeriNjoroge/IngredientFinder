@@ -1,14 +1,17 @@
 package com.example.gnjoroge.ingredientfinder.model;
 
+import org.parceler.Parcel;
+
 /**
  * Created by gnjoroge on 10/8/17.
  */
 
+
 public class Post {
 
-    private String title;
-    private String body;
-    private String author;
+    String title;
+    String body;
+    String author;
 
     public Post() {}
 
